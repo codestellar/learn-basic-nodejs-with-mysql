@@ -1,10 +1,11 @@
-const express = require("express");
-const mysql = require("mysql");
+import express, { json } from "express";
+import { createConnection } from "mysql";
+
 const app = express();
-app.use(express.json());
+app.use(json());
 
 // MySQL Connection
-const conn = mysql.createConnection({
+const conn = createConnection({
   host: "localhost",
   user: "root",
   password: "P@ssword1",
@@ -49,7 +50,7 @@ app.put("/customer/:id", (req, res) => {
   });
 });
 
-// JWT
+// DELETE 
 app.delete("/customer/:id", (req, res) => {
     let sql = `DELETE from persons where id = '${req.params.id}'`;
     let query = conn.query(sql, (err, result) => {
