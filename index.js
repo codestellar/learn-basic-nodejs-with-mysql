@@ -1,63 +1,24 @@
-import express, { json } from "express";
-import { createConnection } from "mysql";
+// import express, { json } from "express";
+// import { createConnection } from "mysql";
+
+const express = require('express');
+
+const jwt = require('./_helpers/jwt');
+const errorHandler = require('./_helpers/errorhandler');
+const customersController = require('./controllers/customers.controller');
 
 const app = express();
-app.use(json());
+app.use(express.json());
 
-// MySQL Connection
-const conn = createConnection({
-  host: "localhost",
-  user: "root",
-  password: "P@ssword1",
-  database: "sonia",
-  port: 3306,
-});
+// use JWT auth to secure the api
+app.use(jwt());
 
-// Post
-app.post("/customer", (req, res) => {
-    let sql = `Insert into persons(name, phone) values('${req.body.name}', '${req.body.phone}');`;
-    let query = conn.query(sql, (err, result) => {
-      if (err) throw err;
-      res.send(req.body);
-    });
-  });
+// api routes
+app.use('/users', require('./controllers/users.controller'));
+app.use('/customers', require('./controllers/customers.controller'));
 
-// GET
-app.get("/customer", (req, res) => {
-  let sql = "select * from persons";
-  let query = conn.query(sql, (err, result) => {
-    if (err) throw err;
-    res.send(result);
-  });
-});
-
-// GET By ID
-app.get("/customer/:id", (req, res) => {
-  let sql = `Select * from persons where id = '${req.params.id}'`;
-  let query = conn.query(sql, (err, result) => {
-    if (err) throw err;
-    res.send(result);
-  });
-});
-
-// Update
-app.put("/customer/:id", (req, res) => {
-  let sql = `Update persons set name = '${req.body.name}', phone= '${req.body.phone}' 
-    where id = '${req.params.id}'`;
-  let query = conn.query(sql, (err, result) => {
-    if (err) throw err;
-    res.send(result);
-  });
-});
-
-// DELETE 
-app.delete("/customer/:id", (req, res) => {
-    let sql = `DELETE from persons where id = '${req.params.id}'`;
-    let query = conn.query(sql, (err, result) => {
-      if (err) throw err;
-      res.send(result);
-    });
-  });
+// global error handler
+app.use(errorHandler);
 
 app.listen(3100, () => {
   console.log(`connected`);
