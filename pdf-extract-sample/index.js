@@ -1,5 +1,5 @@
 var path = require('path')
-var filePath = path.join(__dirname, '2.pdf')
+var filePath = path.join(__dirname, '1.pdf')
 var extract = require('pdf-text-extract')
 extract(filePath,
     {
