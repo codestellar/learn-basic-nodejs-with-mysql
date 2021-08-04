@@ -1,8 +1,60 @@
-'1. Check Property Address\n' +
+'                                                                                                                  Invoice\n' +
   '\n' +
-  '2. Net Taxes Due:\n' +
-  '   757.42\n' +
-  'x        2\n' +
-  '= 1,514.84\n' +
+  '                                                                             Invoice Number              INV-3337\n' +
+  'From:\n' +
+  'DEMO - Sliced Invoices                                                       Order Number                12345\n' +
+  'Suite 5A-1204                                                                Invoice Date                January 25, 2016\n' +
+  '123 Somewhere Street                                                         Due Date                    January 31, 2016\n' +
+  'Your City AZ 12345\n' +
+  '                                                                             Total Due                   $93.50\n' +
+  'admin@slicedinvoices.com\n' +
   '\n' +
-  'Please enter into QC Checklist\n'
+  '\n' +
+  '\n' +
+  '\n' +
+  'To:\n' +
+  'Test Business\n' +
+  '123 Somewhere St\n' +
+  'Melbourne, VIC 3000\n' +
+  'test@test.com\n' +
+  '\n' +
+  '\n' +
+  '\n' +
+  '\n' +
+  '  Hrs/Qty\n' +
+  '\n' +
+  '    1.00\n' +
+  '               Service\n' +
+  '\n' +
+  '               Web Design\n' +
+  '               This is a sample description...\n' +
+  '                                                    id                       Rate/Price\n' +
+  '\n' +
+  '                                                                                 $85.00\n' +
+  '                                                                                                       Adjust\n' +
+  '\n' +
+  '                                                                                                       0.00%\n' +
+  '                                                                                                                     Sub Total\n' +
+  '\n' +
+  '                                                                                                                        $85.00\n' +
+  '\n' +
+  '\n' +
+  '\n' +
+  '                                                                                          Sub Total                     $85.00\n' +
+  '                           Pa\n' +
+  '                                                                                               Tax                          $8.50\n' +
+  '                                                                                              Total                     $93.50\n' +
+  '\n' +
+  '\n' +
+  '\n' +
+  '\n' +
+  'ANZ Bank\n' +
+  'ACC # 1234 1234\n' +
+  'BSB # 4321 432\n' +
+  '\n' +
+  '\n' +
+  '\n' +
+  '\n' +
+  'Payment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\n' +
+  'Thanks for choosing DEMO - Sliced Invoices | admin@slicedinvoices.com\n' +
+  'Page 1/1\n'
