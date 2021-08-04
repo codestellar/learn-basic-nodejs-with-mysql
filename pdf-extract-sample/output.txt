@@ -1,0 +1,8 @@
+'1. Check Property Address\n' +
+  '\n' +
+  '2. Net Taxes Due:\n' +
+  '   757.42\n' +
+  'x        2\n' +
+  '= 1,514.84\n' +
+  '\n' +
+  'Please enter into QC Checklist\n'
