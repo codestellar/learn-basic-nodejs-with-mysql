@@ -25,7 +25,7 @@ pdfParser.on("pdfParser_dataReady", (pdfData) => {
   fs.writeFile(
     "./output.json",
     // To understand the JSON you can use JSON.stringify(pdfData),
-    JSON.stringify(realTextStrings),
+    JSON.stringify(pdfData),
     function (err, result) {
       if (err) {
         console.log("error", err);
